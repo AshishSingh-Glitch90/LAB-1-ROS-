@@ -12,8 +12,11 @@ In the part the pursuer and evader setup is created in which the coordinate fram
 ### Part1: Perception Using Laser Range Finder
 In this part the RANSAC algorithm is implemented to determine the walls using the sensor data obtained from the laser sensor, the detected obstacles/lines are visualized in RVIZ that would verify the reliability of the algorithm.
 
-### Part2: Bug2 Algorithm implementation
+### Part2: Bug2 algorithm implementation
 Robot is made to start at (-8.0, -2.0) with the goal to reach (4.5, 9.0), navigating its way by avoiding obstacles using the output of the BUG2 Algorithm.
+
+## Lab4: A* algorithm implemtation
+In this project the best path to reach from the default start point (-8.0, -2.0) to the goal (entered by user using ROS parameters) is determined by implementing the A* algorithm, and the robot is made to move on the determined path based on the laser sensor values maintaining a safe distance from the obstacles keeping in mind the sixe of the robot.
 
 
 

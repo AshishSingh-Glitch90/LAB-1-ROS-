@@ -1,0 +1,15 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab1)/world/playground_2.world" />
+	<node name = "evader" pkg = "lab1" type = "evader.py" output = "screen">
+		<param name = "bot" type = "string" value = "robot_0"/>
+	</node>
+	<node pkg="lab1" name = "evade_broadcast" type = "broadcaster.py" output = "screen">
+		<param name = "bot" type = "string" value = "robot_0"/>
+	</node>
+	<node pkg = "lab1" name = "pursue_broadcast" type = "broadcaster.py" output = "screen">
+		<param name = "bot" type = "string" value = "robot_1"/>
+	</node>
+	<node pkg = "lab1" name = "pursuer" type = "pursuer.py">
+	</node>
+</launch>
